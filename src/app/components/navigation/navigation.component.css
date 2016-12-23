@@ -1,0 +1,45 @@
+.navbar {
+    height: 50px;
+    line-height: 50px;
+    background: #00b6e3;
+    text-decoration: none;
+}
+
+.navbar-header {
+    float: left;
+}
+
+.navbar-header a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 15pt;
+    margin-left: 25px;
+}
+
+.navbar-menu {
+    float: right;
+    margin-right: 80px;
+}
+
+.navbar-menu ul {
+    list-style-type: none;
+    height: inherit;
+    line-height: 25px;
+}
+
+.navbar-menu ul > li {
+    display: inline-block;
+}
+
+.navbar-menu ul > li > a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 13pt;
+    color: #fff;
+    padding:0 25px;
+}
+
+.navbar-menu ul > li > a:hover {
+    color: #383838;
+}
