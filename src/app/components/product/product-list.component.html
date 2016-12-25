@@ -1,0 +1,16 @@
+<section id="product-list">
+    <div *ngFor="let product of products" class="product">
+        <div>
+            <img src="{{product.productImageUrl}}" alt="{{product.productName}}">
+        </div>
+        <div>
+            <p>{{product.productName | uppercase}}</p>
+            <p style="float: right;">{{product.productPrice | currency:'INR':true}}</p>
+        </div>
+        <div>
+            <button id="buy-button" name="buy">Buy now</button>
+            <button id="detail" [routerLink]="['/product', product.productId]">Details></button>
+        </div>
+    </div>
+
+</section>

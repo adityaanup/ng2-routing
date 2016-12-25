@@ -14,7 +14,7 @@
     text-transform: uppercase;
     color: #fff;
     font-size: 15pt;
-    margin-left: 25px;
+    margin-left: 60px;
 }
 
 .navbar-menu {
@@ -25,7 +25,7 @@
 .navbar-menu ul {
     list-style-type: none;
     height: inherit;
-    line-height: 25px;
+    line-height: 15px;
 }
 
 .navbar-menu ul > li {
