@@ -1,16 +1,15 @@
-<section id="product-list">
-    <div *ngFor="let product of products" class="product">
-        <div>
-            <img src="{{product.productImageUrl}}" alt="{{product.productName}}">
+<div *ngFor="let product of products" class="product">
+    <div class="card">
+        <div class="card-image">
+            <img src="{{product.productImageUrl}}">
         </div>
         <div>
-            <p>{{product.productName | uppercase}}</p>
-            <p style="float: right;">{{product.productPrice | currency:'INR':true}}</p>
+            <p>{{product.productName | uppercase}}
+                <span style="float: right;">{{product.productPrice | currency:'INR':true}}</span>
+            </p>
         </div>
-        <div>
-            <button id="buy-button" name="buy">Buy now</button>
-            <button id="detail" [routerLink]="['/product', product.productId]">Details></button>
+        <div class="card-action">
+            <a class="waves-effect waves-light btn" [routerLink]="['/product', product.productId]"><i class="material-icons right">info</i>Details</a>
         </div>
     </div>
-
-</section>
+</div>

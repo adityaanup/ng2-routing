@@ -9,6 +9,10 @@
     float: left;
 }
 
+div.navbar-header {
+    height: 50px;
+}
+
 .navbar-header a {
     text-decoration: none;
     text-transform: uppercase;
@@ -25,7 +29,6 @@
 .navbar-menu ul {
     list-style-type: none;
     height: inherit;
-    line-height: 15px;
 }
 
 .navbar-menu ul > li {
