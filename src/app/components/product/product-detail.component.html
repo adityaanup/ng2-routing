@@ -1,14 +1,26 @@
-<div *ngIf="product">
-    <h2>{{product.productName}} details!</h2>
-    <div>
-        <label>ProductId: </label>{{product.productId}}
+<div id="content">
+    <div *ngIf="product">
+        <button type="button" class="btn btn-default" (click)="goBack()"><span class="glyphicon glyphicon-chevron-left"></span>Back</button>
+        <div class="row product-detail">
+            <div class="col s4">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="{{product.productImageUrl}}">
+                    </div>
+                </div>
+            </div>
+            <div class="col s8">
+                <div>
+                    <h3>{{product.productName | uppercase}}</h3>
+                    <p>{{product.productPrice | currency:'INR':true}}</p>
+                    <p *ngIf="isAvailable()">in stock</p>
+                    <p *ngIf="!isAvailable()" style="color: #ff0000;">out of stock </p>
+                </div>
+                <div>
+                    <label>Description:</label>
+                    <p>{{product.productDescription}}</p>
+                </div>
+            </div>
+        </div>
     </div>
-    <div>
-        <label>Product Name: </label>
-        <input [(ngModel)]="product.productName" placeholder="product name" />
-    </div>
-    <div>
-        <label>Description:</label><p>{{product.productDescription}}</p>
-    </div>
-    <button type="button" class="btn btn-default" (click)="goBack()">Back</button>
 </div>

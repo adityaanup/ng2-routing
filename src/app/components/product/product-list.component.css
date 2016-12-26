@@ -4,9 +4,19 @@
     height: 300px;
     padding-top: 10px;
     margin-right: 25px;
-    margin-bottom: 50px; 
+    margin-bottom: 20px; 
 }
 
+.product-detail {
+    padding: 5px;
+    padding-bottom: 0;
+}
+
+
+.card .card-action {
+    padding: 10px;
+}
 .card-action a {
     background-color: #00b6e3;
+    margin-left: 20%;
 }

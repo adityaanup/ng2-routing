@@ -8,11 +8,12 @@ import { ProductService } from '../../services/product.service';
 
 @Component({
     selector: 'product-detail',
-    templateUrl: './product-detail.component.html'
+    templateUrl: './product-detail.component.html',
+    styleUrls: ['./product-detail.component.css']
 })
 export class ProductDetailComponent implements OnInit {
 
-    @Input() product: Product;
+    product: Product;
 
     constructor(
         private _productService: ProductService,
@@ -24,6 +25,10 @@ export class ProductDetailComponent implements OnInit {
         this.route.params
             .switchMap((params: Params) => this._productService.getProduct(+params['id']))
             .subscribe(product => this.product = product);
+    }
+
+    isAvailable():boolean {
+        return this.product.available;
     }
 
     goBack(): void {
